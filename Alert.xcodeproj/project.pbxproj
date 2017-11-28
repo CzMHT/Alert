@@ -14,6 +14,9 @@
 		9ECD2F531FCCEFFF00F9DCF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD2F521FCCEFFF00F9DCF1 /* Assets.xcassets */; };
 		9ECD2F561FCCEFFF00F9DCF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECD2F541FCCEFFF00F9DCF1 /* LaunchScreen.storyboard */; };
 		9ECD2F591FCCEFFF00F9DCF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD2F581FCCEFFF00F9DCF1 /* main.m */; };
+		9ECD2F661FCCF05200F9DCF1 /* AlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD2F611FCCF05200F9DCF1 /* AlertManager.m */; };
+		9ECD2F671FCCF05200F9DCF1 /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD2F631FCCF05200F9DCF1 /* AlertView.m */; };
+		9ECD2F681FCCF05200F9DCF1 /* AlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD2F641FCCF05200F9DCF1 /* AlertController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		9ECD2F551FCCEFFF00F9DCF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9ECD2F571FCCEFFF00F9DCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ECD2F581FCCEFFF00F9DCF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9ECD2F601FCCF05200F9DCF1 /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
+		9ECD2F611FCCF05200F9DCF1 /* AlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertManager.m; sourceTree = "<group>"; };
+		9ECD2F621FCCF05200F9DCF1 /* AlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertController.h; sourceTree = "<group>"; };
+		9ECD2F631FCCF05200F9DCF1 /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
+		9ECD2F641FCCF05200F9DCF1 /* AlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertController.m; sourceTree = "<group>"; };
+		9ECD2F651FCCF05200F9DCF1 /* AlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,7 @@
 		9ECD2F3A1FCCEFFE00F9DCF1 = {
 			isa = PBXGroup;
 			children = (
+				9ECD2F5F1FCCF05200F9DCF1 /* Alerts */,
 				9ECD2F451FCCEFFF00F9DCF1 /* Alert */,
 				9ECD2F441FCCEFFF00F9DCF1 /* Products */,
 			);
@@ -72,6 +82,19 @@
 				9ECD2F4F1FCCEFFF00F9DCF1 /* Alert.xcdatamodeld */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		9ECD2F5F1FCCF05200F9DCF1 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				9ECD2F651FCCF05200F9DCF1 /* AlertManager.h */,
+				9ECD2F611FCCF05200F9DCF1 /* AlertManager.m */,
+				9ECD2F621FCCF05200F9DCF1 /* AlertController.h */,
+				9ECD2F641FCCF05200F9DCF1 /* AlertController.m */,
+				9ECD2F601FCCF05200F9DCF1 /* AlertView.h */,
+				9ECD2F631FCCF05200F9DCF1 /* AlertView.m */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ECD2F681FCCF05200F9DCF1 /* AlertController.m in Sources */,
 				9ECD2F4B1FCCEFFF00F9DCF1 /* ViewController.m in Sources */,
 				9ECD2F481FCCEFFF00F9DCF1 /* AppDelegate.m in Sources */,
+				9ECD2F661FCCF05200F9DCF1 /* AlertManager.m in Sources */,
+				9ECD2F671FCCF05200F9DCF1 /* AlertView.m in Sources */,
 				9ECD2F591FCCEFFF00F9DCF1 /* main.m in Sources */,
 				9ECD2F511FCCEFFF00F9DCF1 /* Alert.xcdatamodeld in Sources */,
 			);
@@ -284,10 +310,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Alert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.Alert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -297,10 +324,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Alert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.Alert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
